@@ -1,0 +1,137 @@
+D:\PostOct2017Content\GitStuff>git init
+Initialized empty Git repository in D:/PostOct2017Content/GitStuff/.git/
+
+D:\PostOct2017Content\GitStuff>git add GitCommands.txt
+
+D:\PostOct2017Content\GitStuff>git commit -m "First commit"
+[master (root-commit) f38e4bd] First commit
+ 1 file changed, 19 insertions(+)
+ create mode 100644 GitCommands.txt
+
+D:\PostOct2017Content\GitStuff>git remote add origin https://github.com/rkhachane/Learning.git
+
+D:\PostOct2017Content\GitStuff>git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 439 bytes | 73.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/rkhachane/Learning.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+D:\PostOct2017Content\GitStuff>git add GitCommands.txt
+
+D:\PostOct2017Content\GitStuff>git commit -m "Updated commit"
+[master 1704416] Updated commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\PostOct2017Content\GitStuff>git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 292 bytes | 58.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rkhachane/Learning.git
+   f38e4bd..1704416  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+D:\PostOct2017Content\GitStuff>git checkout master
+Already on 'master'
+M       GitCommands.txt
+Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+D:\PostOct2017Content\GitStuff>git pull
+error: cannot pull with rebase: Your index contains uncommitted changes.
+error: please commit or stash them.
+
+D:\PostOct2017Content\GitStuff>git commit -m "Updated commit for merge"
+[master 13ff040] Updated commit for merge
+ 1 file changed, 15 insertions(+)
+
+D:\PostOct2017Content\GitStuff>git pull
+First, rewinding head to replay your work on top of it...
+Applying: Updated commit for merge
+
+D:\PostOct2017Content\GitStuff>git branch
+* master
+
+D:\PostOct2017Content\GitStuff>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   GitCommands.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\PostOct2017Content\GitStuff>git add *
+
+D:\PostOct2017Content\GitStuff>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   GitCommands.txt
+
+
+D:\PostOct2017Content\GitStuff>git commit -m "Updated formatting"
+[master 5970fd3] Updated formatting
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+D:\PostOct2017Content\GitStuff>git push -u origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 944 bytes | 78.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/rkhachane/Learning.git
+   2a7b890..5970fd3  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+D:\PostOct2017Content\GitStuff>git add Java_Samples
+warning: LF will be replaced by CRLF in Java_Samples/SortedWordFrequencyHashMap.java.
+The file will have its original line endings in your working directory
+
+D:\PostOct2017Content\GitStuff>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Java_Samples/SortedWordFrequencyHashMap.java
+
+
+D:\PostOct2017Content\GitStuff>git commit -m "Java samples"
+[master a0c90c2] Java samples
+ 1 file changed, 90 insertions(+)
+ create mode 100644 Java_Samples/SortedWordFrequencyHashMap.java
+
+D:\PostOct2017Content\GitStuff>git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.42 KiB | 145.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/rkhachane/Learning.git
+   5970fd3..a0c90c2  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+D:\PostOct2017Content\GitStuff>

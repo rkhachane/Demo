@@ -1,0 +1,44 @@
+https://github.com/rkhachane/Learning.git
+Mail rkhachane@yahoo.com
+User rkhachane/d...1!@.
+-------------------------
+Added from feature1
+-------------------------
+
+…or create a new repository on the command line
+echo "# Learning" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/rkhachane/Learning.git
+git push -u origin master
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/rkhachane/Learning.git
+git push -u origin master
+
+-----------------------------------------------------------------------------------------------------------------------------
+Merging via command line
+If you do not want to use the merge button or an automatic merge cannot be performed, you can perform a manual merge on the command line.
+
+Patch https://github.com/rkhachane/Learning.git
+
+Step 1: From your project repository, bring in the changes and test.
+git fetch origin
+git checkout -b feature1 origin/feature1
+git merge master
+
+Step 2: Merge the changes and update on GitHub.
+git checkout master
+git merge --no-ff feature1
+git push origin master
+--------------------------------------------------------------------------------------------------------------------------------------
+How can I recover a file I deleted in my local repo from the remote repo in Git?
+
+You want to go back to the repo state since the last commit
+git reset --hard 
+
+Assuming you deleted files to your local repo and have not committed since the delete then to rcover:
+git reset HEAD \*
+--------------------------------------------------------------------------------------------------------------------------------------
